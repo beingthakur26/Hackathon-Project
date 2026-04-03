@@ -1,0 +1,116 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transition: all var(--duration-md) var(--ease);
+  border-bottom: 1px solid transparent;
+  max-width: var(--container-width);
+}
+
+.navbar--scrolled {
+  background-color: hsla(0, 0%, 97.3%, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:  var(--space-lg);
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__special{
+  color:hsl(67deg 100% 47.52%);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color var(--duration-sm) var(--ease);
+}
+
+.navbar__link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color var(--duration-sm) var(--ease);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--text-primary);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.navbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-xl);
+  z-index: 999;
+}
+
+.mobile-drawer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.mobile-drawer__link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.mobile-drawer__link--cta {
+  color: var(--accent-neon);
+}
+
+@media (max-width: 1024px) {
+  /* .navbar { padding: 24px 0; } */
+  .navbar__links { display: none; }
+  .navbar__burger { display: flex; }
+  .navbar__cta-desktop { display: none; }
+}

@@ -1,0 +1,22 @@
+[
+  {"symbol": "H", "name": "Hydrogen", "number": 1, "category": "diatomic nonmetal", "color": "#00ff00"},
+  {"symbol": "He", "name": "Helium", "number": 2, "category": "noble gas", "color": "#00ffff"},
+  {"symbol": "Li", "name": "Lithium", "number": 3, "category": "alkali metal", "color": "#ff0000"},
+  {"symbol": "Be", "name": "Beryllium", "number": 4, "category": "alkaline earth metal", "color": "#ff7f00"},
+  {"symbol": "B", "name": "Boron", "number": 5, "category": "metalloid", "color": "#ffff00"},
+  {"symbol": "C", "name": "Carbon", "number": 6, "category": "polyatomic nonmetal", "color": "#0000ff"},
+  {"symbol": "N", "name": "Nitrogen", "number": 7, "category": "diatomic nonmetal", "color": "#4b0082"},
+  {"symbol": "O", "name": "Oxygen", "number": 8, "category": "diatomic nonmetal", "color": "#8b00ff"},
+  {"symbol": "F", "name": "Fluorine", "number": 9, "category": "diatomic nonmetal", "color": "#ffffff"},
+  {"symbol": "Ne", "name": "Neon", "number": 10, "category": "noble gas", "color": "#000000"},
+  {"symbol": "Na", "name": "Sodium", "number": 11, "category": "alkali metal", "color": "#ff0000"},
+  {"symbol": "Mg", "name": "Magnesium", "number": 12, "category": "alkaline earth metal", "color": "#ff7f00"},
+  {"symbol": "Al", "name": "Aluminum", "number": 13, "category": "post-transition metal", "color": "#ffff00"},
+  {"symbol": "Si", "name": "Silicon", "number": 14, "category": "metalloid", "color": "#00ff00"},
+  {"symbol": "P", "name": "Phosphorus", "number": 15, "category": "polyatomic nonmetal", "color": "#0000ff"},
+  {"symbol": "S", "name": "Sulfur", "number": 16, "category": "polyatomic nonmetal", "color": "#4b0082"},
+  {"symbol": "Cl", "name": "Chlorine", "number": 17, "category": "diatomic nonmetal", "color": "#8b00ff"},
+  {"symbol": "Ar", "name": "Argon", "number": 18, "category": "noble gas", "color": "#ffffff"},
+  {"symbol": "K", "name": "Potassium", "number": 19, "category": "alkali metal", "color": "#ff0000"},
+  {"symbol": "Ca", "name": "Calcium", "number": 20, "category": "alkaline earth metal", "color": "#ff7f00"}
+]

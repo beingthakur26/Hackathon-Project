@@ -1,0 +1,28 @@
+.card {
+  background: hsla(220, 16%, 11%, 0.9);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color var(--duration-md) var(--ease),
+              box-shadow var(--duration-md) var(--ease);
+}
+
+.card--pad-sm  { padding: var(--space-md); }
+.card--pad-md  { padding: var(--space-lg); }
+.card--pad-lg  { padding: var(--space-xl); }
+
+.card--hover {
+  cursor: pointer;
+}
+.card--hover:hover {
+  border-color: var(--border-bright);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.card--glow:hover {
+  border-color: hsl(215,100%,60%,0.4);
+  box-shadow: 0 0 40px hsl(215,100%,60%,0.15), 0 12px 40px rgba(0,0,0,0.4);
+}

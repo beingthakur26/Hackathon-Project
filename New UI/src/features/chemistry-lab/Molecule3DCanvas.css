@@ -1,0 +1,36 @@
+.molecule-3d-canvas {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background-color: #050505; /* Dark laboratory space */
+  overflow: hidden;
+}
+
+.canvas-3d-hint {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  opacity: 0.9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* Glassmorphism for 3D UI over the canvas */
+.molecule-3d-canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 2;
+}

@@ -1,0 +1,90 @@
+.toxicity-form {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.toxicity-form__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.toxicity-form__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.toxicity-form__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.toxicity-form__examples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.examples-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.example-item {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-sm) var(--ease);
+}
+
+.example-item:hover, .example-item.is-active {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+}
+
+.toxicity-form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.clear-btn {
+  color: var(--text-muted);
+}
+
+.toxicity-form__footer {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

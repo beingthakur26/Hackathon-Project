@@ -1,0 +1,43 @@
+.lab-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: var(--header-height, 80px);
+}
+
+.lab-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.lab-header__content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.lab-title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.lab-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.lab-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .lab-header {
+    padding: var(--space-lg) var(--space-xl);
+  }
+}

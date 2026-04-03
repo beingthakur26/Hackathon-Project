@@ -1,0 +1,121 @@
+.footer {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-xl);
+}
+
+.footer__contact-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.footer__contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  /* padding-bottom: var(--space-2xl); */
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.footer__email {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 6.5rem);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  transition: opacity var(--duration-sm);
+}
+
+.footer__email:hover {
+  opacity: 0.7;
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.footer__brand {
+  max-width: 400px;
+}
+
+.footer__copyright {
+  font-size: 0.85rem;
+  color: #e2ff00; /* Neon yellow accent */
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.footer__brand-text {
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.5;
+}
+
+.footer__nav {
+  display: flex;
+  padding: var(--space-md);
+  gap: var(--space-3xl);
+}
+
+.footer__nav-group {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer__nav-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.footer__nav-group a {
+  font-size: 0.85rem;
+  color: #999;
+  text-decoration: none;
+  transition: color var(--duration-sm);
+}
+
+.footer__nav-group a:hover {
+  color: #fff;
+}
+
+.footer__bottom {
+  border-top: 1px solid #222;
+  padding-top: var(--space-2xl);
+}
+
+.footer__logo-large {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.04em;
+  padding: var(--space-sm);
+  line-height: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .footer__main { flex-direction: column; gap: var(--space-2xl); }
+  .footer__nav { gap: var(--space-2xl); }
+}
+
+@media (max-width: 640px) {
+  .footer__email { font-size: 2rem; }
+  .footer__nav { flex-direction: column; gap: var(--space-xl); }
+}

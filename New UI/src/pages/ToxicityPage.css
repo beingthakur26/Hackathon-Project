@@ -1,0 +1,31 @@
+.toxicity-page {
+  padding: 100px 0 var(--space-xl);
+  min-height: 100vh;
+  background-color: var(--bg-base);
+}
+
+.page-header {
+  margin-bottom: var(--space-xl);
+}
+
+.page-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.toxicity-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .toxicity-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}

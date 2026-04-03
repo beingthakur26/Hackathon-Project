@@ -1,0 +1,102 @@
+.canvas-wrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background-color: var(--bg-base);
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.molecule-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.molecule-svg.mode-erase .atom-node,
+.molecule-svg.mode-erase .bond-group {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20H7L3 16C2 15 2 13 3 12L13 2L22 11L20 20Z'/%3E%3Cpath d='M17 17L7 7'/%3E%3C/svg%3E"), auto;
+}
+
+/* Atom Styles */
+.atom-node {
+  cursor: grab;
+  transition: transform var(--duration-sm) var(--ease);
+}
+
+.atom-node:active {
+  cursor: grabbing;
+}
+
+.atom-bg {
+  fill: #fff;
+  stroke: var(--border);
+  stroke-width: 2px;
+  transition: all var(--duration-sm) var(--ease);
+}
+
+.atom-node:hover .atom-bg {
+  stroke: var(--text-primary);
+  filter: url(#glow);
+}
+
+.atom-symbol {
+  fill: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Bond Styles */
+.bond-group {
+  cursor: pointer;
+}
+
+.bond-line {
+  stroke: var(--border);
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+
+.bond-hitbox {
+  stroke: transparent;
+  stroke-width: 15px;
+  stroke-linecap: round;
+}
+
+.bond-group:hover .bond-line {
+  stroke: var(--text-primary);
+}
+
+.temp-bond {
+  stroke: var(--accent-neon);
+  stroke-width: 2px;
+  stroke-dasharray: 5, 5;
+  pointer-events: none;
+}
+
+.canvas-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .canvas-wrapper {
+    height: 400px;
+  }
+}

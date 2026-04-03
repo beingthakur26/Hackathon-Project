@@ -1,0 +1,9 @@
+/* ─── App.css ─── */
+/* Component-level styles live in src/ui/components/*.css */
+/* This file holds page-level compositions */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
