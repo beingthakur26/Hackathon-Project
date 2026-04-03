@@ -1,5 +1,5 @@
 // API Base URL — change to deployed URL in production
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://f1rr36mb-8000.inc1.devtunnels.ms';
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 // Feature flags
 export const FEATURES = {

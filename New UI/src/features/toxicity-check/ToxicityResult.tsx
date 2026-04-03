@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle, Activity, Cuboid, Download } from 'lucide-r
 import { useToxicityStore } from './useToxicityStore';
 import { Molecule3D } from '../../ui/components/Molecule3D';
 import { jsPDF } from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 import { DateTime } from 'luxon';
 import './ToxicityResult.css';
 
@@ -24,7 +24,7 @@ export const ToxicityResult: React.FC = () => {
 
   const downloadPDF = () => {
     if (!result) return;
-    const doc = new jsPDF() as any;
+    const doc = new jsPDF();
     const date = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
     doc.setFontSize(22);
@@ -40,7 +40,7 @@ export const ToxicityResult: React.FC = () => {
       return [label, typeof val === 'number' ? val.toFixed(3) : val];
     });
 
-    doc.autoTable({
+    autoTable(doc, {
       startY: 45,
       head: [['Descriptor', 'Value']],
       body: [
@@ -51,7 +51,7 @@ export const ToxicityResult: React.FC = () => {
         ...tableData
       ],
       headStyles: { fillColor: [0, 0, 0], textColor: [255, 255, 255] },
-      alternateRowStyles: { fillLine: [245, 245, 245] },
+      alternateRowStyles: { fillColor: [245, 245, 245] },
     });
 
     doc.save(`ToxinAI_Report_${result.iupac_name?.replace(/\s+/g, '_') || 'Result'}.pdf`);

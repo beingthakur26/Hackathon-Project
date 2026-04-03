@@ -51,6 +51,41 @@
   line-height: 1;
 }
 
+.download-report-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--text-primary);
+  color: var(--bg-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--duration-md) var(--ease);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+
+.download-report-btn:hover {
+  background-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), var(--shadow-glow-blue);
+}
+
+.download-report-btn:active {
+  transform: translateY(0);
+}
+
+.download-report-btn svg {
+  transition: transform var(--duration-sm) var(--ease);
+}
+
+.download-report-btn:hover svg {
+  transform: translateY(2px);
+}
+
 .verdict-probability {
   display: flex;
   flex-direction: column;

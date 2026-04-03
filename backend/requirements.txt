@@ -1,11 +1,11 @@
 fastapi
 uvicorn
-pydantic
+pydantic[email]
 joblib
 pandas
 python-multipart
 xgboost
-rdkit-pypi
+rdkit
 requests
 python-dotenv
 python-jose[cryptography]
